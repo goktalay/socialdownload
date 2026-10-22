@@ -1,0 +1,4 @@
+# İmzalı ve ikili test verileri: Windows checkout (core.autocrlf) satır sonlarını çevirmesin — imza bayt bayt doğrulanır
+test/fixtures/SHA2-256SUMS -text
+test/fixtures/*.sig binary
+*.asc -text
