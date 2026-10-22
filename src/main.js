@@ -180,7 +180,9 @@ function main() {
   let engineFiles = null;
   let engine = null;
   function initEngine() {
-    const resourcesDir = app.isPackaged ? path.join(process.resourcesPath, 'engine') : path.join(__dirname, '..', 'vendor', 'engine', process.platform === 'win32' ? 'win64' : 'linux64');
+    // SD_ENGINE_DIR: geliştirme / test için motor klasörü (yoksa paketli resources/engine ya da vendor/engine/<hedef>)
+    const resourcesDir = process.env.SD_ENGINE_DIR
+      || (app.isPackaged ? path.join(process.resourcesPath, 'engine') : path.join(__dirname, '..', 'vendor', 'engine', process.platform === 'win32' ? 'win64' : 'linux64'));
     engineFiles = createEngineFiles({
       resourcesDir, userDir: app.getPath('userData'),
       run: (bin, args) => new Promise((resolve, reject) => execFile(bin, args, { timeout: 60000, windowsHide: true }, (e, out) => (e ? reject(e) : resolve(out)))),

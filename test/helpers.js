@@ -23,6 +23,16 @@ const fixture = (name) => fs.readFileSync(path.join(__dirname, 'fixtures', name)
 function fakeSpawn(script) {
   const calls = [];
   const spawn = (bin, args, opts) => {
+    // Windows'ta süreç ağacı taskkill ile sonlandırılır: hedef sahte süreci öldür
+    if (bin === 'taskkill') {
+      calls.push({ bin, args, env: opts && opts.env, child: { pid: -1 } });
+      const target = calls.find((c) => String(c.child.pid) === String(args[1]));
+      if (target) target.child.kill();
+      const k = new EventEmitter();
+      k.stdout = new PassThrough(); k.stderr = new PassThrough(); k.pid = 1; k.exitCode = 0; k.kill = () => {};
+      setTimeout(() => k.emit('close', 0), 1);
+      return k;
+    }
     const child = new EventEmitter();
     child.stdout = new PassThrough();
     child.stderr = new PassThrough();

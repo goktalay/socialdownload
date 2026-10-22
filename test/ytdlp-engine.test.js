@@ -231,3 +231,23 @@ test('motor güncellemesi: imza + sha256 + sürüm denetimi; başarısızlıkta 
   const odd = { ...routes, 'https://api.github.com/repos/yt-dlp/yt-dlp/releases/latest': { tag_name: '../../evil' } };
   await assert.rejects(mk(odd).check(), (e) => e.code === 'bad_tag');
 });
+
+test('Windows: iptal süreç ağacını taskkill /T /F ile sonlandırır', async () => {
+  const orig = Object.getOwnPropertyDescriptor(process, 'platform');
+  Object.defineProperty(process, 'platform', { value: 'win32' });
+  try {
+    const dir = tmpDir('sd-win-');
+    const spawn = fakeSpawn(() => ({ stderr: ['SDFMT|18|360|mp4|10|Asılı'], hang: true }));
+    const eng = Y.createEngine({ spawn, ytdlpPath: () => 'C:\\yt-dlp.exe', ffmpegDir: () => null });
+    const ctl = new AbortController();
+    const p = eng.download({ url: 'https://ornek.com/v', opts: {} }, { outDir: path.join(dir, 'o'), tempDir: path.join(dir, 't'), template: '{title}' }, { signal: ctl.signal, onProgress: () => {} });
+    await tick(20);
+    ctl.abort();
+    await assert.rejects(p, (e) => e.code === 'aborted');
+    const kill = spawn.calls.find((c) => c.bin === 'taskkill');
+    assert.ok(kill, 'taskkill çağrıldı');
+    assert.deepEqual(kill.args, ['/pid', String(spawn.calls[0].child.pid), '/T', '/F']);
+  } finally {
+    Object.defineProperty(process, 'platform', orig);
+  }
+});

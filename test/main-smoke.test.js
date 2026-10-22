@@ -47,6 +47,9 @@ test('main.js sahte electron ile yüklenir, IPC kanallarını kaydeder ve giriş
     nativeImage: { createFromPath: () => ({ resize: () => ({}) }) },
     Notification: { isSupported: () => false },
   };
+  // Motor yok (vendor/engine olsa bile): testte gerçek yt-dlp / ağ çağrılmaz
+  process.env.SD_ENGINE_DIR = tmpDir('sd-noengine-');
+  delete process.env.SD_YTDLP;
   const origLoad = Module._load;
   Module._load = function (request, ...rest) {
     if (request === 'electron') return electron;
@@ -79,11 +82,8 @@ test('main.js sahte electron ile yüklenir, IPC kanallarını kaydeder ve giriş
   // DRM servisi analiz edilmeden reddedilir; motor yoksa açık hata
   const drm = await handles.get('analyze:run')({}, { text: 'https://www.netflix.com/watch/1' });
   assert.deepEqual([drm.ok, drm.code], [false, 'drm']);
-  const prev = process.env.SD_YTDLP;
-  process.env.SD_YTDLP = '/yok/yt-dlp';
   const noEngine = await handles.get('analyze:run')({}, { text: 'https://youtu.be/aqz-KE-bpKQ' });
-  if (prev === undefined) delete process.env.SD_YTDLP; else process.env.SD_YTDLP = prev;
-  if (!fs.existsSync(path.join(__dirname, '..', 'vendor', 'engine', 'linux64', 'yt-dlp'))) assert.deepEqual([noEngine.ok, noEngine.code], [false, 'engine_missing']);
+  assert.deepEqual([noEngine.ok, noEngine.code], [false, 'engine_missing']);
 
   // Ayarlar: geçersiz değerler temizlenir, eşzamanlılık 1–4, şablon doğrulanır
   const s = await handles.get('settings:set')({}, { download: { concurrency: 9, template: '../x', height: 777, limitRate: -5, gapSec: 99 }, appTheme: 'zebra', downloadDir: 'goreli/yol', hack: 1 });

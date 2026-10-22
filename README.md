@@ -65,7 +65,7 @@ npm run dist                # Windows: kurulum + portable (dist/)
 | `scripts/fetch-engine.js` + `engine-manifest.json` | Derlemede motoru resmi sürümlerden indirir ve doğrular |
 
 Sunucu adresi `SD_API` ortam değişkeniyle değiştirilebilir (varsayılan `https://mastertool.download`). Geliştirmede motor
-yolları `SD_YTDLP` ve `SD_FFMPEG_DIR` ile verilebilir.
+yolları `SD_YTDLP` ve `SD_FFMPEG_DIR`, motor klasörünün tamamı `SD_ENGINE_DIR` ile verilebilir.
 
 ## Yayın
 
