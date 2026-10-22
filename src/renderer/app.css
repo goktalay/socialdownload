@@ -282,3 +282,4 @@ body {
 .account-chip .spin { width: 13px; height: 13px; color: var(--accent); }
 .set-wrap .set-pages > section { max-width: 100%; }
 .w-ic-sm { width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center; background: var(--surface-2); color: var(--text-2); flex: 0 0 auto; }
+.btn .kbd { background: none; border: 1px solid currentColor; border-bottom-width: 1px; padding: 0 5px; }

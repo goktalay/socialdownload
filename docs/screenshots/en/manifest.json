@@ -1,0 +1,122 @@
+[
+  {
+    "file": "01-hos-geldiniz-gece.png",
+    "theme": "dark",
+    "title": "Paste a link",
+    "caption": "Ctrl+V or Paste: the link is analyzed; supported platforms"
+  },
+  {
+    "file": "02-video-analiz-gece.png",
+    "theme": "dark",
+    "title": "Analysis and resolution choice",
+    "caption": "No 4K in the source: it clearly says the closest lower (1080p) will be used"
+  },
+  {
+    "file": "03-oynatma-listesi-gece.png",
+    "theme": "dark",
+    "title": "Playlist",
+    "caption": "All items come selected and can be removed one by one; private ones are skipped"
+  },
+  {
+    "file": "04-kuyruk-gece.png",
+    "theme": "dark",
+    "title": "Download queue",
+    "caption": "1–4 parallel downloads; progress, speed, time left; pause, resume, retry"
+  },
+  {
+    "file": "05-yalniz-ses-gece.png",
+    "theme": "dark",
+    "title": "Audio only",
+    "caption": "MP3, M4A or Opus; 128–320 kbps or best quality"
+  },
+  {
+    "file": "06-gecmis-gece.png",
+    "theme": "dark",
+    "title": "History",
+    "caption": "Recent downloads; download again, open source; optional encrypted sync"
+  },
+  {
+    "file": "07-ayarlar-indirme-gece.png",
+    "theme": "dark",
+    "title": "Settings › Downloads",
+    "caption": "Folder, file name template, default format, parallelism, speed and pacing"
+  },
+  {
+    "file": "08-ayarlar-motor-gece.png",
+    "theme": "dark",
+    "title": "Settings › Engine",
+    "caption": "yt-dlp + FFmpeg; signature- and SHA-256-verified \"Update engine\""
+  },
+  {
+    "file": "09-uyari-gece.png",
+    "theme": "dark",
+    "title": "Before you start",
+    "caption": "Public content only; sign-in-only and DRM content is not supported by design"
+  },
+  {
+    "file": "10-giris-gece.png",
+    "theme": "dark",
+    "title": "Single sign-on",
+    "caption": "Sign in once with your Mastertool account; the other apps won’t ask again"
+  },
+  {
+    "file": "01-hos-geldiniz-gunduz.png",
+    "theme": "light",
+    "title": "Paste a link",
+    "caption": "Ctrl+V or Paste: the link is analyzed; supported platforms"
+  },
+  {
+    "file": "02-video-analiz-gunduz.png",
+    "theme": "light",
+    "title": "Analysis and resolution choice",
+    "caption": "No 4K in the source: it clearly says the closest lower (1080p) will be used"
+  },
+  {
+    "file": "03-oynatma-listesi-gunduz.png",
+    "theme": "light",
+    "title": "Playlist",
+    "caption": "All items come selected and can be removed one by one; private ones are skipped"
+  },
+  {
+    "file": "04-kuyruk-gunduz.png",
+    "theme": "light",
+    "title": "Download queue",
+    "caption": "1–4 parallel downloads; progress, speed, time left; pause, resume, retry"
+  },
+  {
+    "file": "05-yalniz-ses-gunduz.png",
+    "theme": "light",
+    "title": "Audio only",
+    "caption": "MP3, M4A or Opus; 128–320 kbps or best quality"
+  },
+  {
+    "file": "06-gecmis-gunduz.png",
+    "theme": "light",
+    "title": "History",
+    "caption": "Recent downloads; download again, open source; optional encrypted sync"
+  },
+  {
+    "file": "07-ayarlar-indirme-gunduz.png",
+    "theme": "light",
+    "title": "Settings › Downloads",
+    "caption": "Folder, file name template, default format, parallelism, speed and pacing"
+  },
+  {
+    "file": "08-ayarlar-motor-gunduz.png",
+    "theme": "light",
+    "title": "Settings › Engine",
+    "caption": "yt-dlp + FFmpeg; signature- and SHA-256-verified \"Update engine\""
+  },
+  {
+    "file": "09-uyari-gunduz.png",
+    "theme": "light",
+    "title": "Before you start",
+    "caption": "Public content only; sign-in-only and DRM content is not supported by design"
+  },
+  {
+    "file": "10-giris-gunduz.png",
+    "theme": "light",
+    "title": "Single sign-on",
+    "caption": "Sign in once with your Mastertool account; the other apps won’t ask again"
+  }
+]

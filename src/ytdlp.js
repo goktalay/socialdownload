@@ -237,7 +237,7 @@ function parseAnalysis(info, sourceUrl) {
     return {
       kind: 'playlist', id: String(info.id || ''), url: info.webpage_url || info.original_url || sourceUrl, title: String(info.title || info.id || '').trim(),
       uploader: info.uploader || info.channel || null, platform: platformFor(info, sourceUrl), thumbnail: bestThumb(info) || (entries.find((e) => e.thumbnail) || {}).thumbnail || null,
-      count: num(info.playlist_count) || entries.length, entries, truncated: (num(info.playlist_count) || 0) > entries.length,
+      count: num(info.playlist_count) || entries.length, entries, truncated: raw.length >= PLAYLIST_MAX || (num(info.playlist_count) || 0) > raw.length,
     };
   }
   const blocked = BLOCKED_AVAILABILITY[info.availability];

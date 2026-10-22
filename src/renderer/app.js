@@ -343,7 +343,7 @@ function renderAnalysis() {
     html = `${head}
       <div class="sel-bar"><span id="sel-count">${esc(t('an.selected', { n: an.sel.size, total: n }))}</span><span class="spacer"></span>
         <button class="linkish" type="button" id="sel-all">${esc(t('an.selectAll'))}</button><button class="linkish" type="button" id="sel-none">${esc(t('an.selectNone'))}</button></div>
-      <div class="entries">${entries.map(entryRow).join('')}</div>`;
+      <div class="entries">${(entries.length === groups.length + groups.reduce((n, g) => n + g.group.entries.length, 0) && groups.length === 1 ? entries.filter((x) => !x.group) : entries).map(entryRow).join('')}</div>`;
   }
   if (an.rejected && an.rejected.length) html += `<div class="note">${icon('info')}<span>${esc(t('an.rejected', { n: an.rejected.length }))} ${esc(an.rejected.slice(0, 3).map((r) => `${r.text} (${errText(r.code)})`).join(' · '))}</span></div>`;
   box.innerHTML = `<div class="a-scroll">${html}</div><div class="fmt" id="fmt"></div>`;
@@ -488,13 +488,24 @@ async function enqueueSelection() {
   renderAnalysis();
 }
 
-// Küçük resimler ana süreçten data: adresi olarak gelir (CSP: img-src 'self' data:)
+// Küçük resimler ana süreçten data: adresi olarak gelir (CSP: img-src 'self' data:). Uzun listelerde yalnız görünenler
+// istenir (1000 öğelik kanalda 1000 istek atılmasın).
+const thumbObserver = new IntersectionObserver((entries) => {
+  for (const en of entries) {
+    if (!en.isIntersecting) continue;
+    thumbObserver.unobserve(en.target);
+    fetchThumb(en.target);
+  }
+}, { rootMargin: '200px' });
+function fetchThumb(img) {
+  const u = img.dataset.thumb;
+  const set = (d) => { if (d) img.src = d; else img.remove(); };
+  if (thumbCache.has(u)) return set(thumbCache.get(u));
+  window.api.thumb(u).then((d) => { thumbCache.set(u, d); set(d); });
+}
 function loadThumbs(root) {
   root.querySelectorAll('img[data-thumb]').forEach((img) => {
-    const u = img.dataset.thumb;
-    const set = (d) => { if (d) img.src = d; else img.remove(); };
-    if (thumbCache.has(u)) return set(thumbCache.get(u));
-    window.api.thumb(u).then((d) => { thumbCache.set(u, d); set(d); });
+    if (thumbCache.has(img.dataset.thumb)) fetchThumb(img); else thumbObserver.observe(img);
   });
 }
 

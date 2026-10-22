@@ -1,0 +1,122 @@
+[
+  {
+    "file": "01-hos-geldiniz-gece.png",
+    "theme": "dark",
+    "title": "Bağlantıyı yapıştırın",
+    "caption": "Ctrl+V ya da Yapıştır: bağlantı analiz edilir; desteklenen platformlar"
+  },
+  {
+    "file": "02-video-analiz-gece.png",
+    "theme": "dark",
+    "title": "Analiz ve çözünürlük seçimi",
+    "caption": "Kaynakta 4K yok: en yakın düşük çözünürlük (1080p) indirileceği açıkça yazılır"
+  },
+  {
+    "file": "03-oynatma-listesi-gece.png",
+    "theme": "dark",
+    "title": "Oynatma listesi",
+    "caption": "Tüm öğeler seçili gelir, tek tek kaldırılabilir; özel öğeler seçilemez"
+  },
+  {
+    "file": "04-kuyruk-gece.png",
+    "theme": "dark",
+    "title": "İndirme kuyruğu",
+    "caption": "Eşzamanlı 1–4 indirme; ilerleme, hız, kalan süre; duraklat, sürdür, yeniden dene"
+  },
+  {
+    "file": "05-yalniz-ses-gece.png",
+    "theme": "dark",
+    "title": "Yalnız ses",
+    "caption": "MP3, M4A ya da Opus; 128–320 kbps ya da en iyi kalite"
+  },
+  {
+    "file": "06-gecmis-gece.png",
+    "theme": "dark",
+    "title": "Geçmiş",
+    "caption": "Son indirmeler; yeniden indir, kaynağı aç; isteğe bağlı şifreli senkron"
+  },
+  {
+    "file": "07-ayarlar-indirme-gece.png",
+    "theme": "dark",
+    "title": "Ayarlar › İndirme",
+    "caption": "Klasör, dosya adı şablonu, varsayılan biçim, eşzamanlılık, hız ve istek aralığı"
+  },
+  {
+    "file": "08-ayarlar-motor-gece.png",
+    "theme": "dark",
+    "title": "Ayarlar › Motor",
+    "caption": "yt-dlp + FFmpeg; imza ve SHA-256 doğrulamalı \"Motoru güncelle\""
+  },
+  {
+    "file": "09-uyari-gece.png",
+    "theme": "dark",
+    "title": "Kullanmadan önce",
+    "caption": "Yalnız herkese açık içerik; giriş gerektiren ve DRM’li içerik tasarım gereği yok"
+  },
+  {
+    "file": "10-giris-gece.png",
+    "theme": "dark",
+    "title": "Tek giriş",
+    "caption": "Mastertool hesabıyla bir kez giriş yapın; diğer uygulamalar yeniden sormaz"
+  },
+  {
+    "file": "01-hos-geldiniz-gunduz.png",
+    "theme": "light",
+    "title": "Bağlantıyı yapıştırın",
+    "caption": "Ctrl+V ya da Yapıştır: bağlantı analiz edilir; desteklenen platformlar"
+  },
+  {
+    "file": "02-video-analiz-gunduz.png",
+    "theme": "light",
+    "title": "Analiz ve çözünürlük seçimi",
+    "caption": "Kaynakta 4K yok: en yakın düşük çözünürlük (1080p) indirileceği açıkça yazılır"
+  },
+  {
+    "file": "03-oynatma-listesi-gunduz.png",
+    "theme": "light",
+    "title": "Oynatma listesi",
+    "caption": "Tüm öğeler seçili gelir, tek tek kaldırılabilir; özel öğeler seçilemez"
+  },
+  {
+    "file": "04-kuyruk-gunduz.png",
+    "theme": "light",
+    "title": "İndirme kuyruğu",
+    "caption": "Eşzamanlı 1–4 indirme; ilerleme, hız, kalan süre; duraklat, sürdür, yeniden dene"
+  },
+  {
+    "file": "05-yalniz-ses-gunduz.png",
+    "theme": "light",
+    "title": "Yalnız ses",
+    "caption": "MP3, M4A ya da Opus; 128–320 kbps ya da en iyi kalite"
+  },
+  {
+    "file": "06-gecmis-gunduz.png",
+    "theme": "light",
+    "title": "Geçmiş",
+    "caption": "Son indirmeler; yeniden indir, kaynağı aç; isteğe bağlı şifreli senkron"
+  },
+  {
+    "file": "07-ayarlar-indirme-gunduz.png",
+    "theme": "light",
+    "title": "Ayarlar › İndirme",
+    "caption": "Klasör, dosya adı şablonu, varsayılan biçim, eşzamanlılık, hız ve istek aralığı"
+  },
+  {
+    "file": "08-ayarlar-motor-gunduz.png",
+    "theme": "light",
+    "title": "Ayarlar › Motor",
+    "caption": "yt-dlp + FFmpeg; imza ve SHA-256 doğrulamalı \"Motoru güncelle\""
+  },
+  {
+    "file": "09-uyari-gunduz.png",
+    "theme": "light",
+    "title": "Kullanmadan önce",
+    "caption": "Yalnız herkese açık içerik; giriş gerektiren ve DRM’li içerik tasarım gereği yok"
+  },
+  {
+    "file": "10-giris-gunduz.png",
+    "theme": "light",
+    "title": "Tek giriş",
+    "caption": "Mastertool hesabıyla bir kez giriş yapın; diğer uygulamalar yeniden sormaz"
+  }
+]
