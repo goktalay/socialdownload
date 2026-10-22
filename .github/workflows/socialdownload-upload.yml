@@ -1,0 +1,35 @@
+# Daha önce yayınlanmış bir GitHub Release'in exe'lerini mastertool.download'a yükler (var olanlar 409 ile atlanır).
+# Actions › "mastertool.download'a yükle" › Run workflow › etiket (ör. v1.2.0).
+name: mastertool.download'a yükle
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Sürüm etiketi (ör. v1.2.0)'
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # etiket açıklaması (sürüm notu) için
+
+      - name: Release'teki exe'leri indir
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ inputs.tag }}
+        run: gh release download "$TAG" -p 'Social-Download-Setup-*.exe' -p 'Social-Download-Portable-*.exe' -D dist
+
+      - name: mastertool.download'a yükle
+        env:
+          SOCIALDOWNLOAD_RELEASE_KEY: ${{ secrets.SOCIALDOWNLOAD_RELEASE_KEY || secrets.SD_RELEASE_KEY }}
+          TAG: ${{ inputs.tag }}
+        run: |
+          V="${TAG#v}"
+          bash scripts/upload-socialdownload.sh "$V" "dist/Social-Download-Setup-$V.exe" "$(git for-each-ref --format='%(contents)' "refs/tags/$TAG")" "dist/Social-Download-Portable-$V.exe"

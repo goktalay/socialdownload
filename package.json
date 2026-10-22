@@ -1,0 +1,69 @@
+{
+  "name": "social-download",
+  "productName": "Social Download",
+  "version": "1.0.0",
+  "description": "Sosyal medya platformlarındaki herkese açık bağlantılardan video ve ses indirir: çözünürlük/biçim seçimi, oynatma listesi, indirme kuyruğu",
+  "main": "src/main.js",
+  "author": "Mastertool",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test test/",
+    "icon": "node scripts/make-icon.js",
+    "engine": "node scripts/fetch-engine.js win64",
+    "engine:linux": "node scripts/fetch-engine.js linux64",
+    "engine:pin": "node scripts/fetch-engine.js --pin",
+    "screenshots": "node scripts/screenshots.js",
+    "e2e": "node scripts/e2e-electron.js",
+    "dist": "node scripts/fetch-engine.js win64 && electron-builder --win",
+    "dist:portable": "node scripts/fetch-engine.js win64 && electron-builder --win portable"
+  },
+  "dependencies": {
+    "@napi-rs/keyring": "^2.1.2"
+  },
+  "devDependencies": {
+    "electron": "^33.4.11",
+    "electron-builder": "^25.1.8",
+    "fflate": "^0.8.3",
+    "playwright-core": "^1.64.1",
+    "png-to-ico": "^2.1.8",
+    "sharp": "^0.33.5"
+  },
+  "build": {
+    "appId": "com.mastertool.socialdownload",
+    "productName": "Social Download",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "src/**/*",
+      "build/icon.png",
+      "build/icon.svg",
+      "package.json"
+    ],
+    "extraResources": [
+      { "from": "vendor/engine/win64", "to": "engine", "filter": ["**/*"] }
+    ],
+    "win": {
+      "icon": "build/icon.ico",
+      "target": [
+        { "target": "nsis", "arch": ["x64"] },
+        { "target": "portable", "arch": ["x64"] }
+      ]
+    },
+    "nsis": {
+      "artifactName": "Social-Download-Setup-${version}.exe",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "shortcutName": "Social Download",
+      "include": "build/installer.nsh",
+      "menuCategory": "Master Tool"
+    },
+    "portable": {
+      "artifactName": "Social-Download-Portable-${version}.exe"
+    }
+  }
+}

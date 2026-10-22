@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:">
+  <title>Social Download</title>
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="mastertool.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <img src="../../build/icon.png" alt="">
+        <div>
+          <div class="brand-name">Social Download</div>
+          <div class="brand-sub" id="stats"></div>
+        </div>
+      </div>
+      <div class="urlbar" id="urlbar">
+        <span class="url-ico"></span>
+        <textarea id="url" rows="1" spellcheck="false" autocomplete="off"></textarea>
+        <button class="btn ghost sm" id="btnPaste" type="button"></button>
+        <button class="btn primary" id="btnAnalyze" type="button"></button>
+      </div>
+      <div class="actions">
+        <button class="btn ghost" id="btnSettings" type="button"></button>
+        <button class="account-chip" id="btnAccount" type="button"><span class="ac-avatar"></span><span class="ac-sync"></span></button>
+      </div>
+    </header>
+
+    <div class="update-bar hidden" id="updateBar"></div>
+    <div class="update-bar engine hidden" id="engineBar"></div>
+    <div class="clip-bar hidden" id="clipBar"></div>
+    <div class="notice-bar" id="noticeBar"></div>
+
+    <div class="main">
+      <section class="pane analysis" id="analysis"></section>
+      <section class="pane queue-pane">
+        <div class="q-head">
+          <div class="tabs" id="tabs"></div>
+          <span class="spacer"></span>
+          <div class="q-tools" id="qTools"></div>
+        </div>
+        <div class="q-list" id="qList" tabindex="0"></div>
+      </section>
+    </div>
+  </div>
+
+  <script src="../i18n.js"></script>
+  <script src="../urls.js"></script>
+  <script src="../formats.js"></script>
+  <script src="ui.js"></script>
+  <script src="platforms.js"></script>
+  <script src="mastertool.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+{
+ "id": "UCSMOQeBJ2RAnuFungnQOxLg",
+ "title": "Blender - Videos",
+ "uploader": "Blender",
+ "channel": "Blender",
+ "webpage_url": "https://www.youtube.com/@BlenderOfficial/videos",
+ "original_url": "https://www.youtube.com/@BlenderOfficial/videos",
+ "extractor_key": "YoutubeTab",
+ "_type": "playlist",
+ "playlist_count": null,
+ "thumbnails": [
+  {
+   "url": "https://yt3.googleusercontent.com/6pYvl5Jl7MszRRlhjlRuEfil7B1sgt3u4WbCCl7yHPv1LbsSVAcaoGfs3gyrJUM201DQnzrUOA=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+   "width": 1060,
+   "height": 175
+  },
+  {
+   "url": "https://yt3.googleusercontent.com/6pYvl5Jl7MszRRlhjlRuEfil7B1sgt3u4WbCCl7yHPv1LbsSVAcaoGfs3gyrJUM201DQnzrUOA=w1138-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+   "width": 1138,
+   "height": 188
+  },
+  {
+   "url": "https://yt3.googleusercontent.com/6pYvl5Jl7MszRRlhjlRuEfil7B1sgt3u4WbCCl7yHPv1LbsSVAcaoGfs3gyrJUM201DQnzrUOA=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+   "width": 1707,
+   "height": 283
+  }
+ ],
+ "entries": [
+  {
+   "_type": "url",
+   "ie_key": "Youtube",
+   "id": "sO_lhW8av3U",
+   "url": "https://www.youtube.com/watch?v=sO_lhW8av3U",
+   "title": "Blender Conference 2026 Recap",
+   "duration": 149,
+   "live_status": null,
+   "availability": null,
+   "channel": null,
+   "uploader": null,
+   "thumbnails": [
+    {
+     "url": "https://i.ytimg.com/vi/sO_lhW8av3U/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDuR0n6G8rK1ByMhmqfiJrLVi3S6A",
+     "width": 360,
+     "height": 202
+    },
+    {
+     "url": "https://i.ytimg.com/vi/sO_lhW8av3U/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLATSInaX-ioZnhhXqDUbtLJl2MELg",
+     "width": 720,
+     "height": 404
+    }
+   ]
+  },
+  {
+   "_type": "url",
+   "ie_key": "Youtube",
+   "id": "SVJiCL3K0j4",
+   "url": "https://www.youtube.com/watch?v=SVJiCL3K0j4",
+   "title": "The Future of Rendering — BCON26",
+   "duration": 1106,
+   "live_status": null,
+   "availability": null,
+   "channel": null,
+   "uploader": null,
+   "thumbnails": [
+    {
+     "url": "https://i.ytimg.com/vi/SVJiCL3K0j4/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDVpq4Er8DMMtbv-oTZ72wGsh8tfA",
+     "width": 360,
+     "height": 202
+    },
+    {
+     "url": "https://i.ytimg.com/vi/SVJiCL3K0j4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBwSTr0tf5Q-b9ULG9O8BuBqenH-A",
+     "width": 720,
+     "height": 404
+    }
+   ]
+  },
+  {
+   "_type": "url",
+   "ie_key": "Youtube",
+   "id": "TqP7Hyy_MFo",
+   "url": "https://www.youtube.com/watch?v=TqP7Hyy_MFo",
+   "title": "Subject Extraction for Scene Reconstruction in VFX — BCON26",
+   "duration": 1418,
+   "live_status": null,
+   "availability": null,
+   "channel": null,
+   "uploader": null,
+   "thumbnails": [
+    {
+     "url": "https://i.ytimg.com/vi/TqP7Hyy_MFo/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBiuXt2LSi-kXlAeiUB5TmrSWnneA",
+     "width": 360,
+     "height": 202
+    },
+    {
+     "url": "https://i.ytimg.com/vi/TqP7Hyy_MFo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAK7HC24pG3PS6A8hBrND6Efzem5A",
+     "width": 720,
+     "height": 404
+    }
+   ]
+  },
+  {
+   "_type": "url",
+   "ie_key": "Youtube",
+   "id": "0wpz3oqb0YA",
+   "url": "https://www.youtube.com/watch?v=0wpz3oqb0YA",
+   "title": "Audio Nodes: Live Sound, Living Geometry — BCON26",
+   "duration": 2930,
+   "live_status": null,
+   "availability": null,
+   "channel": null,
+   "uploader": null,
+   "thumbnails": [
+    {
+     "url": "https://i.ytimg.com/vi/0wpz3oqb0YA/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCNTmju7fl0hfNhLXt44J16CpLy9Q",
+     "width": 360,
+     "height": 202
+    },
+    {
+     "url": "https://i.ytimg.com/vi/0wpz3oqb0YA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLABAMynMYIW7Y3L-j_N5xUFhCjy7Q",
+     "width": 720,
+     "height": 404
+    }
+   ]
+  },
+  {
+   "_type": "url",
+   "ie_key": "Youtube",
+   "id": "k6l1CK0O_r4",
+   "url": "https://www.youtube.com/watch?v=k6l1CK0O_r4",
+   "title": "Closing Event — BCON26",
+   "duration": 777,
+   "live_status": null,
+   "availability": null,
+   "channel": null,
+   "uploader": null,
+   "thumbnails": [
+    {
+     "url": "https://i.ytimg.com/vi/k6l1CK0O_r4/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCSknFEmWdIa7OHGSpCKomhtYEJfg",
+     "width": 360,
+     "height": 202
+    },
+    {
+     "url": "https://i.ytimg.com/vi/k6l1CK0O_r4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC_oos8wssbVohzEcJ9vsIwJMofKA",
+     "width": 720,
+     "height": 404
+    }
+   ]
+  },
+  {
+   "_type": "url",
+   "ie_key": "Youtube",
+   "id": "EJEYFsWwqKk",
+   "url": "https://www.youtube.com/watch?v=EJEYFsWwqKk",
+   "title": "Suzanne Awards — BCON26",
+   "duration": 453,
+   "live_status": null,
+   "availability": null,
+   "channel": null,
+   "uploader": null,
+   "thumbnails": [
+    {
+     "url": "https://i.ytimg.com/vi/EJEYFsWwqKk/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBygpEQH236dFujxIgBRvPXiXSOhA",
+     "width": 360,
+     "height": 202
+    },
+    {
+     "url": "https://i.ytimg.com/vi/EJEYFsWwqKk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDTkY13vyn1nToRBN9HYa_V3643lQ",
+     "width": 720,
+     "height": 404
+    }
+   ]
+  },
+  {
+   "_type": "url",
+   "ie_key": "Youtube",
+   "id": "xxxxxxxxxxx",
+   "url": "https://www.youtube.com/watch?v=xxxxxxxxxxx",
+   "title": "[Private video]",
+   "duration": null,
+   "live_status": null,
+   "availability": "private",
+   "thumbnails": []
+  },
+  {
+   "_type": "url",
+   "ie_key": "Youtube",
+   "id": "yyyyyyyyyyy",
+   "url": "https://www.youtube.com/watch?v=yyyyyyyyyyy",
+   "title": "Canlı yayın",
+   "duration": null,
+   "live_status": "is_live",
+   "availability": null,
+   "thumbnails": []
+  }
+ ]
+}
